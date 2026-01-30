@@ -67,6 +67,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    flex-shrink: 0;
 }
 
 .logo a {
@@ -83,6 +88,7 @@ body {
     letter-spacing: 0.08em;
     color: var(--white);
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .logo-tagline {
@@ -101,16 +107,23 @@ body {
 .nav-list {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 24px;
     align-items: center;
+    flex-wrap: nowrap;
+}
+
+.nav-list li {
+    flex-shrink: 0;
 }
 
 .nav-list a {
     text-decoration: none;
     color: var(--text-light);
     font-weight: 500;
+    font-size: 14px;
     transition: color 0.3s;
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-list a:hover {
@@ -754,25 +767,28 @@ body {
 .raas-notes {
     max-width: 720px;
     margin: 32px auto 0;
-    padding: 24px 28px 26px;
-    border-radius: 14px;
-    border-left: 4px solid rgba(249, 115, 22, 0.8);
-    background: rgba(15, 23, 42, 0.5);
+    padding: 28px 32px 30px 32px;
+    border-radius: 16px;
+    border-left: 6px solid #ea5514;
+    background: rgba(15, 23, 42, 0.9);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(234, 85, 20, 0.15);
     text-align: left;
 }
 
 .raas-notes h4 {
-    font-size: 13px;
-    letter-spacing: 0.18em;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 8px;
+    color: #ea5514;
+    margin-bottom: 14px;
 }
 
 .raas-notes p {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.85);
-    line-height: 1.75;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.8;
 }
 
 @media (max-width: 768px) {
@@ -1170,7 +1186,8 @@ body {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* ========== Responsive: Phone / Mobile UI ========== */
+/* ========== Responsive: Phone / Mobile UI (industry-standard) ========== */
+/* 8pt grid, 48px min touch targets, clear hierarchy, thumb-friendly layout */
 @media (max-width: 768px) {
     .header {
         padding-top: calc(16px + env(safe-area-inset-top, 0));
@@ -1178,8 +1195,8 @@ body {
     }
 
     .container {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .logo-text {
@@ -1188,10 +1205,11 @@ body {
     }
 
     .logo-tagline {
-        font-size: 11px;
-        margin-top: 2px;
+        font-size: 12px;
+        margin-top: 4px;
     }
 
+    /* Nav drawer: full-screen, 48px touch targets, 8px visual separation */
     .nav {
         display: none;
         position: fixed;
@@ -1202,7 +1220,7 @@ body {
         background: rgba(5, 8, 22, 0.98);
         backdrop-filter: blur(20px);
         z-index: 999;
-        padding: calc(80px + env(safe-area-inset-top, 0)) 24px 32px;
+        padding: calc(72px + env(safe-area-inset-top, 0)) 24px 40px;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
@@ -1216,23 +1234,28 @@ body {
 
     .nav.active .nav-list {
         flex-direction: column;
-        gap: 0;
+        gap: 8px;
         width: 100%;
         list-style: none;
     }
 
     .nav.active .nav-list a {
-        display: block;
-        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        padding: 16px 20px;
         min-height: 48px;
         line-height: 1.4;
-        color: rgba(255, 255, 255, 0.9);
+        color: rgba(255, 255, 255, 0.92);
         font-size: 16px;
-        border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.06);
+        transition: background 0.2s, color 0.2s;
     }
 
-    .nav.active .nav-list a:hover {
+    .nav.active .nav-list a:hover,
+    .nav.active .nav-list a:active {
         color: var(--white);
+        background: rgba(255, 255, 255, 0.1);
     }
 
     .nav.active .nav-list a::after {
@@ -1243,9 +1266,9 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 44px;
-        height: 44px;
-        padding: 10px;
+        width: 48px;
+        height: 48px;
+        padding: 12px;
         z-index: 1001;
     }
 
@@ -1256,44 +1279,52 @@ body {
         background: var(--white);
     }
 
-    /* Hero */
+    /* Hero: 8pt spacing, clear hierarchy (32–48pt title, 14–16pt body) */
     .mainvisual {
         min-height: auto;
-        padding: 40px 0 32px;
+        padding: 48px 0 40px;
     }
 
     .mainvisual .inner {
         grid-template-columns: 1fr;
-        gap: 28px;
-        padding: 0 20px;
+        gap: 32px;
+        padding: 0 24px;
     }
 
     .mainvisual__textarea {
         max-width: none;
     }
 
+    .eyebrow {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+
     .mainvisual__ttl {
         font-size: 32px;
-        margin-bottom: 20px;
+        line-height: 1.35;
+        margin-bottom: 24px;
     }
 
     .mainvisual__text {
-        font-size: 14px;
+        font-size: 15px;
+        line-height: 1.75;
         max-width: none;
     }
 
     .hero-cta {
         display: flex;
         flex-direction: column;
-        gap: 12px;
-        margin-top: 24px;
+        gap: 16px;
+        margin-top: 32px;
     }
 
     .hero-cta .btn {
         width: 100%;
         text-align: center;
-        padding: 14px 24px;
+        padding: 16px 24px;
         min-height: 48px;
+        font-size: 15px;
     }
 
     .mainvisual__slider {
@@ -1302,16 +1333,16 @@ body {
 
     .mainvisual__controlBtn,
     .mainvisual__controlArrows button {
-        width: 44px;
-        height: 44px;
-        min-width: 44px;
-        min-height: 44px;
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        min-height: 48px;
     }
 
     .mainvisual__controlBtn svg,
     .mainvisual__controlArrows button svg {
-        width: 18px;
-        height: 18px;
+        width: 20px;
+        height: 20px;
     }
 
     .mainvisual__controlLine {
@@ -1320,29 +1351,36 @@ body {
 
     .postSlider {
         flex-direction: column;
-        gap: 20px;
+        gap: 24px;
     }
 
-    /* Sections */
+    /* Sections: 8pt grid, 48–56px section padding, 24px card gaps */
     .section {
         padding: 56px 0;
     }
 
     .section-header {
-        margin-bottom: 32px;
+        margin-bottom: 40px;
     }
 
     .section-header--center {
-        margin-bottom: 32px;
+        margin-bottom: 40px;
+    }
+
+    .section-kicker {
+        font-size: 12px;
+        margin-bottom: 12px;
     }
 
     .section-title-large {
         font-size: 28px;
-        margin-bottom: 16px;
+        line-height: 1.35;
+        margin-bottom: 20px;
     }
 
     .section-lead {
-        font-size: 14px;
+        font-size: 15px;
+        line-height: 1.7;
     }
 
     .challenge-grid,
@@ -1350,48 +1388,155 @@ body {
     .business-grid,
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 24px;
+    }
+
+    .challenge-card,
+    .service-card,
+    .business-card,
+    .about-card {
+        padding: 24px;
+        border-radius: 16px;
+    }
+
+    .challenge-card h3,
+    .service-card h3,
+    .business-card h3,
+    .about-card h3 {
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+
+    .challenge-card p,
+    .service-card p,
+    .business-card p,
+    .about-card p {
+        font-size: 14px;
+        line-height: 1.75;
     }
 
     .platform-grid {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 32px;
     }
 
     .platform-columns {
         grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .platform-panel {
+        padding: 24px;
+        border-radius: 16px;
+    }
+
+    .raas-comparison {
+        gap: 0;
+    }
+
+    .raas-column {
+        padding: 24px 20px;
+    }
+
+    .raas-arrow {
+        width: 100%;
+        height: 48px;
+        transform: rotate(90deg);
     }
 
     .raas-notes {
-        margin-top: 24px;
-        padding: 20px 20px 22px;
+        margin-top: 32px;
+        padding: 24px;
+        border-radius: 16px;
     }
 
-    .challenge-card,
-    .service-card {
-        padding: 22px 20px;
-    }
-
+    /* Contact: card-style options, 48px submit, 8pt spacing */
     .contact-content {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 32px;
+    }
+
+    .contact-options {
+        gap: 24px;
+    }
+
+    .contact-option {
+        padding: 24px;
+        border-radius: 16px;
+    }
+
+    .contact-form-wrapper {
+        padding: 32px 24px;
+        border-radius: 16px;
+    }
+
+    .contact-form {
+        gap: 24px;
+    }
+
+    .form-group label {
+        margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 16px;
+        min-height: 48px;
+    }
+
+    .btn-submit {
+        margin-top: 8px;
+        min-height: 48px;
+        padding: 16px 24px;
+        font-size: 16px;
+    }
+
+    /* Footer: 2-column link grid (industry standard), 8pt spacing */
+    .footer {
+        padding: 48px 0 24px;
     }
 
     .footer-content {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 24px;
+        align-items: stretch;
+        text-align: left;
+        gap: 32px;
     }
 
     .footer-logo .logo-text {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .footer-nav-list {
-        flex-direction: column;
-        gap: 12px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 24px;
+        list-style: none;
+        align-items: start;
+    }
+
+    .footer-nav-list li {
+        margin: 0;
+    }
+
+    .footer-nav-list a {
+        display: flex;
         align-items: center;
+        min-height: 48px;
+        padding: 8px 0;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.88);
+    }
+
+    .footer-nav-list a:hover {
+        color: var(--white);
+    }
+
+    .footer-copyright {
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        font-size: 13px;
     }
 
     .u-sp {
@@ -1403,40 +1548,49 @@ body {
     }
 }
 
+/* Small phones: 8pt grid, safe areas, typography scale */
 @media (max-width: 480px) {
     .container {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .mainvisual {
-        padding: 32px 0 24px;
+        padding: 40px 0 32px;
     }
 
     .mainvisual .inner {
-        padding: 0 16px;
-        gap: 24px;
+        padding: 0 20px;
+        gap: 28px;
     }
 
     .mainvisual__ttl {
         font-size: 26px;
-        margin-bottom: 16px;
+        margin-bottom: 20px;
     }
 
     .mainvisual__text {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .section {
-        padding: 40px 0;
+        padding: 48px 0;
     }
 
     .section-title-large {
         font-size: 24px;
+        margin-bottom: 16px;
     }
 
     .section-title {
         font-size: 22px;
+    }
+
+    .challenge-card,
+    .service-card,
+    .business-card,
+    .about-card {
+        padding: 20px;
     }
 
     .contact-form-wrapper {
@@ -1449,7 +1603,11 @@ body {
     }
 
     .footer {
-        padding-bottom: calc(24px + env(safe-area-inset-bottom, 0));
+        padding: 40px 0 calc(24px + env(safe-area-inset-bottom, 0));
+    }
+
+    .footer-nav-list {
+        gap: 4px 20px;
     }
 }
 
