@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NS Techno | 人機協働で、スマートな未来へ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="#top">
+                        <span class="logo-text">NS Techno</span>
+                    </a>
+                    <p class="logo-tagline">人機協働で、スマートな未来へ</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#top">トップ</a></li>
+                        <li><a href="#challenges">市場の課題</a></li>
+                        <li><a href="#ai-raas">AI RaaS モデル</a></li>
+                        <li><a href="#services">ソリューション</a></li>
+                        <li><a href="#platform">プラットフォーム</a></li>
+                        <li><a href="#business">ビジネスモデル</a></li>
+                        <li><a href="#about">私たちについて</a></li>
+                        <li><a href="#contact">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="メニュー">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Main Visual -->
+    <section id="top" class="mainvisual jsScrollView isAnimated">
+        <div class="mainvisual__bg">
+            <canvas id="particleCanvas" class="particle-canvas"></canvas>
+            <div class="mainvisual__bg-gradient"></div>
+        </div>
+        <div class="inner">
+            <div class="mainvisual__textarea">
+                <p class="eyebrow">2026 . 01 / Smart Cleaning Infrastructure</p>
+                <h1 class="mainvisual__ttl">
+                    人とロボットが協働する、<br>
+                    次世代の<span>クリーンインフラ</span>。
+                </h1>
+                <p class="mainvisual__text">
+                    NS Technoは、3K業種といわれる清掃・保守の現場に<br class="u-pc">
+                    AIとロボティクスを組み合わせた<span class="text-highlight">AI RaaS（Robotics as a Service）</span>モデルを提供。<br>
+                    少子高齢化による人手不足とコスト高騰という課題を、<br class="u-pc">
+                    「人機協働」という新しい働き方で、静かに・確実にアップデートしていきます。
+                </p>
+                <div class="hero-cta">
+                    <a href="#ai-raas" class="btn btn-primary">AI RaaSとは</a>
+                    <a href="#services" class="btn btn-ghost">サービスシーンを見る</a>
+                </div>
+            </div>
+            <div class="mainvisual__slider">
+                <ul class="mainvisual-slider">
+                    <li class="slick-slide">
+                        <a href="#services">
+                            <figure>
+                                <img decoding="async" src="https://via.placeholder.com/640x400/050816/ffffff?text=業務用清掃+AI%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88" alt="業務用清掃ソリューション">
+                                <span class="slide-placeholder-text">You can insert image here</span>
+                            </figure>
+                            <p>オフィス・商業施設向け 業務用清掃ソリューション</p>
+                        </a>
+                    </li>
+                    <li class="slick-slide">
+                        <a href="#services">
+                            <figure>
+                                <img decoding="async" src="https://via.placeholder.com/640x400/050816/ffffff?text=%E9%AB%98%E6%89%80%E5%A4%96%E5%A3%81%E6%B8%85%E6%8E%83" alt="高所外壁清掃ソリューション">
+                                <span class="slide-placeholder-text">You can insert image here</span>
+                            </figure>
+                            <p>超高層ビル向け 高所外壁清掃ソリューション</p>
+                        </a>
+                    </li>
+                    <li class="slick-slide">
+                        <a href="#services">
+                            <figure>
+                                <img decoding="async" src="https://via.placeholder.com/640x400/050816/ffffff?text=%E5%A4%AA%E9%99%BD%E5%85%89%E7%99%BA%E9%9B%BB%E6%89%80%E4%BF%9D%E5%AE%88" alt="太陽光発電所保守ソリューション">
+                                <span class="slide-placeholder-text">You can insert image here</span>
+                            </figure>
+                            <p>太陽光発電所のスマート保守ソリューション</p>
+                        </a>
+                    </li>
+                    <li class="slick-slide">
+                        <a href="#services">
+                            <figure>
+                                <img decoding="async" src="https://via.placeholder.com/640x400/050816/ffffff?text=%E8%88%B9%E8%88%B6%E6%B8%85%E6%8E%83" alt="船舶清掃ソリューション">
+                                <span class="slide-placeholder-text">You can insert image here</span>
+                            </figure>
+                            <p>貨物船・クルーズ船向け 船舶清掃ソリューション</p>
+                        </a>
+                    </li>
+                    <li class="slick-slide">
+                        <a href="#contact">
+                            <figure>
+                                <img decoding="async" src="https://via.placeholder.com/323x400/ff6b35/ffffff?text=お問い合わせ" alt="お問い合わせ">
+                                <span class="slide-placeholder-text">You can insert image here</span>
+                            </figure>
+                            <p>豊富な実績と確かなノウハウで、中長期的な業務運営をサポート</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="mainvisual__control">
+                    <div class="mainvisual__controlBtn">
+                        <button class="slider-play-pause" aria-label="再生/停止">
+                            <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ea5514" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            <svg class="pause-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ea5514" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="6" y="4" width="4" height="16"></rect>
+                                <rect x="14" y="4" width="4" height="16"></rect>
+                            </svg>
+                        </button>
+                    </div>
+                <div class="mainvisual__controlNums">
+                    <div class="mainvisual__controlNum01">01</div>
+                    <div class="mainvisual__controlLine"><span></span></div>
+                    <div class="mainvisual__controlNum02">07</div>
+                </div>
+                    <div class="mainvisual__controlArrows">
+                        <button class="postSlider__prev slick-arrow" aria-label="前へ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.371 10.266">
+                                <path fill="none" stroke="#ea5514" stroke-linecap="round" d="M5.67 9.561.752 5.186 5.67.706"></path>
+                            </svg>
+                        </button>
+                        <button class="postSlider__next slick-arrow" aria-label="次へ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.371 10.266">
+                                <path fill="none" stroke="#ea5514" stroke-linecap="round" d="M5.67 9.561.752 5.186 5.67.706"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Challenges -->
+    <section id="challenges" class="section section--light">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-kicker">市場における挑戦</p>
+                <h2 class="section-title-large">今のやり方では、<br class="u-sp">現場が持たない。</h2>
+                <p class="section-lead">
+                    少子高齢化で人は減り続ける一方、清掃や保守のニーズは決して減りません。<br class="u-pc">
+                    3K業種と言われてきた現場では、従来型の人海戦術だけではもはや持続可能ではありません。
+                </p>
+            </div>
+            <div class="challenge-grid">
+                <article class="challenge-card">
+                    <h3>少子高齢化による恒常的な人手不足</h3>
+                    <p>
+                        サービス需要は減らないのに、担い手は年々減少。<br>
+                        若年層の敬遠と高齢化により、現場の負荷は限界に近づいています。
+                    </p>
+                </article>
+                <article class="challenge-card">
+                    <h3>採用・育成コストの高騰</h3>
+                    <p>
+                        高賃金化と長期的な研修コストが、清掃・保守ビジネスの利益を大きく圧迫。<br>
+                        「人を増やす」だけでは、もはや解決になりません。
+                    </p>
+                </article>
+                <article class="challenge-card">
+                    <h3>サービス品質のばらつき</h3>
+                    <p>
+                        人の経験やコンディションに左右される作業品質。<br>
+                        安定したレベルで結果を出し続けることが難しく、クレームリスクも高止まりしています。
+                    </p>
+                </article>
+                <article class="challenge-card">
+                    <h3>ロボット導入の初期投資リスク</h3>
+                    <p>
+                        高額な専用ロボットの購入・保守費用は、中小企業にとって大きなハードル。<br>
+                        「興味はあるが、一歩目が踏み出せない」状態が続いています。
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI RaaS Model -->
+    <section id="ai-raas" class="section section--dark">
+        <div class="container">
+            <div class="section-header section-header--center">
+                <p class="section-kicker">AI RaaS モードに関する紹介</p>
+                <h2 class="section-title-large">AI RaaS：<br class="u-sp"><span>結果</span>そのものを、サービスに。</h2>
+                <p class="section-lead">
+                    NS TechnoのAI RaaSは、「ロボットを売る」のではなく「清掃という結果」を提供するモデルです。<br class="u-pc">
+                    お客様は機材や保守の心配をせず、「どれだけきれいになったか」に対してだけ対価を支払います。
+                </p>
+            </div>
+            <div class="raas-layout">
+                <p class="raas-flow-label">従来 → AI RaaSモード</p>
+                <div class="raas-comparison">
+                    <div class="raas-column">
+                        <h3>従来モード</h3>
+                        <ul class="raas-list">
+                            <li>ロボット本体を一括購入、またはリース契約</li>
+                            <li>導入後の運用・保守・アップデートはすべて自社負担</li>
+                            <li>十分な活用ができなくても、投資リスクはそのまま</li>
+                        </ul>
+                    </div>
+                    <div class="raas-arrow" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="raas-column raas-column--accent">
+                        <h3>AI RaaS モード</h3>
+                        <ul class="raas-list">
+                            <li>ロボット＋AI＋人材をパッケージ化した「結果連動型サービス」</li>
+                            <li>清掃面積や達成レベルに応じた成果報酬型の料金体系</li>
+                            <li>サービス提供者とお客様のKPIが同じ方向を向く、真のパートナーシップ</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="raas-notes">
+                    <h4>Value</h4>
+                    <p>
+                        私たちは、実際のビジネス成果にもとづいてのみ価値を語ります。<br>
+                        「台数」ではなく「成果」を軸に、お客様と長期的な関係を築きます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi Scene Services -->
+    <section id="services" class="section section--grid">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-kicker">コア業務 / 多元的サービスシーン</p>
+                <h2 class="section-title-large">清掃と保守の、<br class="u-sp">あらゆるシーンをカバー。</h2>
+                <p class="section-lead">
+                    オフィスビルから太陽光発電所、船舶まで。<br>
+                    それぞれの現場に最適化されたロボットと運用ノウハウで、ワンストップのソリューションを提供します。
+                </p>
+            </div>
+            <div class="service-scene-grid">
+                <article class="service-card">
+                    <h3>業務用清掃ソリューション</h3>
+                    <p class="service-tag">オフィス / モール / 病院 / 交通拠点</p>
+                    <p class="service-text">
+                        床清掃・ごみ収集・トイレメンテナンスまでを一体でカバーする、日常清掃パッケージ。<br>
+                        自律航行・スマート障害物回避・高効率清掃アルゴリズムにより、人手では難しい安定品質を実現します。
+                    </p>
+                </article>
+                <article class="service-card">
+                    <h3>高所外壁清掃ソリューション</h3>
+                    <p class="service-tag">超高層ビル / ホテル / 大型会場</p>
+                    <p class="service-text">
+                        ロープ作業に頼らない、高所外壁ガラス清掃ロボット。<br>
+                        吸着安定性とインテリジェント経路計画により、安全性とスピードを両立しながら、仕上がり品質を担保します。
+                    </p>
+                </article>
+                <article class="service-card">
+                    <h3>太陽光発電所保守ソリューション</h3>
+                    <p class="service-tag">地上型 / 商業・産業施設 / 住宅屋根</p>
+                    <p class="service-text">
+                        水を使わないパネル清掃、雑草除去、AIによるスマート点検を組み合わせた保守パッケージ。<br>
+                        省エネかつ高効率な巡回により、発電効率とO&amp;Mコストの最適バランスを実現します。
+                    </p>
+                </article>
+                <article class="service-card">
+                    <h3>船舶清掃ソリューション</h3>
+                    <p class="service-tag">貨物船 / クルーズ船 / 軍艦</p>
+                    <p class="service-text">
+                        船体・甲板・船倉の徹底清掃と消毒を、自律型ロボットと高圧洗浄技術で支援。<br>
+                        水中ロボットや遠隔操作技術を組み合わせ、安全かつ効率的なメンテナンスを可能にします。
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Human + Machine Platform -->
+    <section id="platform" class="section section--dark section--split">
+        <div class="container">
+            <div class="platform-grid">
+                <div class="platform-copy">
+                    <p class="section-kicker">技術的優勢 / 人機協働スマートプラットフォーム</p>
+                    <h2 class="section-title-large">1＋1 が、<br class="u-sp">2を超えていく。</h2>
+                    <p class="section-lead">
+                        ロボットは高危険・高強度・反復作業を担い、人は判断とクリエイティブな運用に集中する。<br>
+                        NS Technoの「人機協働」モデルは、サービス品質と効率を同時に引き上げながら、現場の負荷を軽減します。
+                    </p>
+                    <div class="platform-columns">
+                        <div>
+                            <h3>Robots</h3>
+                            <p>高危険・高負荷・高頻度なタスクを24時間365日で担当し、人の肉体的負担を最小化します。</p>
+                        </div>
+                        <div>
+                            <h3>Humans</h3>
+                            <p>シナリオ設計、例外対応、品質基準の設計など、「判断」が必要な領域にフォーカスできます。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-panel">
+                    <h3>Smart Clean プラットフォーム</h3>
+                    <ul class="platform-list">
+                        <li>
+                            <span>スマートマッチング</span>
+                            各ビルの清掃ニーズから最適な「管理人」とロボットを自動アサインする配車エンジン。
+                        </li>
+                        <li>
+                            <span>スマート行動</span>
+                            シナリオレイアウト情報をもとに、AIエージェントが最適なサービスプランと動線を自動生成。
+                        </li>
+                        <li>
+                            <span>スマート管理</span>
+                            「仮想清掃進捗」をリアルタイムで可視化。Uberの車両追跡のように、清掃状況をいつでもトラッキング可能。
+                        </li>
+                        <li>
+                            <span>インテリジェント検収</span>
+                            作業完了後、AIエージェントが仕上がりを自律チェック。基準に満たない場合は自動でリカバリーを提案します。
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Model -->
+    <section id="business" class="section section--light">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-kicker">ビジネスモード / フレキシブルな料金体系</p>
+                <h2 class="section-title-large">「清掃した時間」ではなく、<br class="u-sp">「得られた成果」にだけ払う。</h2>
+                <p class="section-lead">
+                    AI RaaSでは、お客様は設備の所有やメンテナンスから解放され、清掃効果という結果に対してのみ料金をお支払いいただきます。<br>
+                    ロボットビジネスへの参入障壁を下げつつ、地域ごとの人手不足という構造課題にもフィットするモデルです。
+                </p>
+            </div>
+            <div class="business-grid">
+                <div class="business-card">
+                    <h3>より低いトータルコスト</h3>
+                    <p>
+                        高額なロボットの一括購入は不要。<br>
+                        サブスクリプション＋成果連動型の料金により、初期投資を抑えつつ、必要なときに必要なだけ利用できます。
+                    </p>
+                </div>
+                <div class="business-card">
+                    <h3>清掃効果にもとづく課金</h3>
+                    <p>
+                        稼働時間や台数ではなく、「どれだけきれいになったか」を基準に料金を設計。<br>
+                        お客様のKPIとNS TechnoのKPIが同じ方向を向くため、常に成果最大化に向けた改善が行われます。
+                    </p>
+                </div>
+                <div class="business-card">
+                    <h3>地域特性に最適化</h3>
+                    <p>
+                        特に少子高齢化が進む日本のような地域において、<br>
+                        人的リソースの不足と高齢化という構造的課題を、技術とモデルの両面から解決します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section--dark section--center">
+        <div class="container">
+            <div class="section-header section-header--center">
+                <p class="section-kicker">私たちについて</p>
+                <h2 class="section-title-large">日本の清掃インフラを、<br class="u-sp">オープンでスマートなものに。</h2>
+                <p class="section-lead">
+                    NS Technoは、人とロボットの協働を前提とした「商業清掃オープンソースモデル」の構築を目指しています。<br>
+                    ハードウェアベンダー、センサーメーカー、開発者、そして現場のパートナーと共に、世界中の商業空間をよりクリーンにしていきます。
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Vision</h3>
+                    <p>
+                        AIによる人機協働を当たり前にし、日本および世界の商業空間清掃における<br class="u-pc">
+                        サービスプロバイダーであり、エンパワーメントのハブであり、リーダーであり続けること。
+                    </p>
+                </div>
+                <div class="about-card">
+                    <h3>Mission</h3>
+                    <p>
+                        日本発の業務用清掃オープンソースモデルを構築し、<br>
+                        誰もが安心して利用できるスマートクリーンプラットフォームを通じて、世界を少しずつ、しかし確実にきれいにしていくこと。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="contact-subtitle">お気軽にご相談ください</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-options">
+                        <div class="contact-option">
+                            <h3 class="contact-option-title">システム開発をご検討の方</h3>
+                            <p class="contact-option-text">
+                                引き継ぎなどのご心配は不要です。<br>
+                                すぐにお伺いして、<br>
+                                その場でお見積りできます。
+                            </p>
+                        </div>
+                        <div class="contact-option">
+                            <h3 class="contact-option-title">資料請求・お問い合わせ</h3>
+                            <p class="contact-option-text">
+                                システム開発でお困りの方必見です！
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">お名前 <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">会社名</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">送信する</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">NS Techno</span>
+                </div>
+                <nav class="footer-nav">
+                    <ul class="footer-nav-list">
+                        <li><a href="#top">トップ</a></li>
+                        <li><a href="#service">サービス内容</a></li>
+                        <li><a href="#feature">特徴</a></li>
+                        <li><a href="#contact">お問い合わせ</a></li>
+                        <li><a href="#company">会社概要</a></li>
+                        <li><a href="#privacy">個人情報保護方針</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-copyright">
+                <p>Copyright © 2026 NS Techno. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery (required for Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

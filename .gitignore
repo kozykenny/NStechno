@@ -1,0 +1,9 @@
+# Only track files the website actually uses. Ignore the rest so push/upload is fast.
+/assets/*
+!/assets/css/
+!/assets/js/
+!/assets/images/
+
+# OS
+.DS_Store
+Thumbs.db
