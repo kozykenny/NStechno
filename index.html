@@ -14,6 +14,14 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
+    <!-- SVG symbols (hidden) -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+        <defs>
+            <symbol id="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </symbol>
+        </defs>
+    </svg>
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -53,20 +61,22 @@
         </div>
         <div class="inner">
             <div class="mainvisual__textarea">
-                <p class="eyebrow">2026 . 01 / Smart Cleaning Infrastructure</p>
+                <p class="eyebrow u-pc-only">2026 . 01 / Smart Cleaning Infrastructure</p>
                 <h1 class="mainvisual__ttl">
-                    人とロボットが協働する、<br>
+                    人とロボットが協働する、<br class="u-pc-only">
                     次世代の<span>クリーンインフラ</span>。
                 </h1>
-                <p class="mainvisual__text">
+                <p class="mainvisual__text mainvisual__text--long u-pc-only">
                     NS Technoは、3K業種といわれる清掃・保守の現場に<br class="u-pc">
                     AIとロボティクスを組み合わせた<span class="text-highlight">AI RaaS（Robotics as a Service）</span>モデルを提供。<br>
                     少子高齢化による人手不足とコスト高騰という課題を、<br class="u-pc">
                     「人機協働」という新しい働き方で、静かに・確実にアップデートしていきます。
                 </p>
+                <p class="mainvisual__text mainvisual__text--short u-sp-only">AI RaaSで、清掃の「成果」にだけ払う。人機協働で、現場をアップデート。</p>
                 <div class="hero-cta">
                     <a href="#ai-raas" class="btn btn-primary">AI RaaSとは</a>
-                    <a href="#services" class="btn btn-ghost">サービスシーンを見る</a>
+                    <a href="#services" class="hero-cta__link u-sp-only">サービスを見る</a>
+                    <a href="#services" class="btn btn-ghost u-pc-only">サービスシーンを見る</a>
                 </div>
             </div>
             <div class="mainvisual__slider">
@@ -120,10 +130,10 @@
                 <div class="mainvisual__control">
                     <div class="mainvisual__controlBtn">
                         <button class="slider-play-pause" aria-label="再生/停止">
-                            <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ea5514" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
-                            <svg class="pause-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ea5514" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="pause-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="6" y="4" width="4" height="16"></rect>
                                 <rect x="14" y="4" width="4" height="16"></rect>
                             </svg>
@@ -137,12 +147,12 @@
                     <div class="mainvisual__controlArrows">
                         <button class="postSlider__prev slick-arrow" aria-label="前へ">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.371 10.266">
-                                <path fill="none" stroke="#ea5514" stroke-linecap="round" d="M5.67 9.561.752 5.186 5.67.706"></path>
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" d="M5.67 9.561.752 5.186 5.67.706"></path>
                             </svg>
                         </button>
                         <button class="postSlider__next slick-arrow" aria-label="次へ">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.371 10.266">
-                                <path fill="none" stroke="#ea5514" stroke-linecap="round" d="M5.67 9.561.752 5.186 5.67.706"></path>
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" d="M5.67 9.561.752 5.186 5.67.706"></path>
                             </svg>
                         </button>
                     </div>
@@ -335,38 +345,62 @@
         </div>
     </section>
 
-    <!-- Business Model -->
-    <section id="business" class="section section--light">
+    <!-- Business Model / Reason -->
+    <section id="business" class="section section--light section--reason">
         <div class="container">
-            <div class="section-header">
-                <p class="section-kicker">ビジネスモード / フレキシブルな料金体系</p>
-                <h2 class="section-title-large">「清掃した時間」ではなく、<br class="u-sp">「得られた成果」にだけ払う。</h2>
-                <p class="section-lead">
-                    AI RaaSでは、お客様は設備の所有やメンテナンスから解放され、清掃効果という結果に対してのみ料金をお支払いいただきます。<br>
-                    ロボットビジネスへの参入障壁を下げつつ、地域ごとの人手不足という構造課題にもフィットするモデルです。
-                </p>
-            </div>
-            <div class="business-grid">
-                <div class="business-card">
-                    <h3>より低いトータルコスト</h3>
-                    <p>
-                        高額なロボットの一括購入は不要。<br>
-                        サブスクリプション＋成果連動型の料金により、初期投資を抑えつつ、必要なときに必要なだけ利用できます。
-                    </p>
+            <div class="inner">
+                <div class="ttlSec jsScrollView isAnimated" data-scroll-view="fadeInRightward">
+                    <p class="ttlSec__en">REASON</p>
+                    <h2 class="ttlSec__ja">「清掃した時間」ではなく、<br class="u-sp">「得られた成果」にだけ払う。</h2>
                 </div>
-                <div class="business-card">
-                    <h3>清掃効果にもとづく課金</h3>
-                    <p>
-                        稼働時間や台数ではなく、「どれだけきれいになったか」を基準に料金を設計。<br>
-                        お客様のKPIとNS TechnoのKPIが同じ方向を向くため、常に成果最大化に向けた改善が行われます。
-                    </p>
+                <ol class="simpleCardsNum jsScrollView isAnimated" data-scroll-view="fadeInUpward">
+                    <li class="simpleCardsNum__item simpleCardsNum__item--1">
+                        <span class="simpleCardsNum__num" aria-hidden="true">01</span>
+                        <div class="simpleCardsNum__body">
+                            <h3 class="simpleCardsNum__ttl">より低いトータルコスト</h3>
+                            <p class="simpleCardsNum__text">高額なロボットの一括購入は不要。サブスクリプション＋成果連動型の料金により、<span>初期投資を抑え</span>つつ、必要なときに必要なだけ利用できます。</p>
+                        </div>
+                    </li>
+                    <li class="simpleCardsNum__item simpleCardsNum__item--2">
+                        <span class="simpleCardsNum__num" aria-hidden="true">02</span>
+                        <div class="simpleCardsNum__body">
+                            <h3 class="simpleCardsNum__ttl">清掃効果にもとづく課金</h3>
+                            <p class="simpleCardsNum__text">稼働時間や台数ではなく、「どれだけきれいになったか」を基準に料金を設計。お客様のKPIとNS TechnoのKPIが<span>同じ方向</span>を向くため、常に成果最大化に向けた改善が行われます。</p>
+                        </div>
+                    </li>
+                    <li class="simpleCardsNum__item simpleCardsNum__item--3">
+                        <span class="simpleCardsNum__num" aria-hidden="true">03</span>
+                        <div class="simpleCardsNum__body">
+                            <h3 class="simpleCardsNum__ttl">地域特性に最適化</h3>
+                            <p class="simpleCardsNum__text">特に少子高齢化が進む日本のような地域において、人的リソースの不足と高齢化という構造的課題を、<span>技術とモデル</span>の両面から解決します。</p>
+                        </div>
+                    </li>
+                </ol>
+                <div class="reasonSec__company jsScrollView isAnimated" data-scroll-view="fadeInUpward">
+                    <h3 class="reasonSec__companyTtl">大手・官公庁のパートナーとして、<br class="u-sp">清掃・保守領域を中心に<br>スマート清掃事業を推進</h3>
+                    <div class="reasonSec__companyListWrap" aria-hidden="true">
+                        <ul class="reasonSec__companyList reasonSec__companyList--scroll">
+                            <li><img decoding="async" src="https://via.placeholder.com/120x48/fff/6834d4?text=Partner+01" alt="パートナー01"></li>
+                            <li><img decoding="async" src="https://via.placeholder.com/120x48/fff/8b5cf6?text=Partner+02" alt="パートナー02"></li>
+                            <li><img decoding="async" src="https://via.placeholder.com/120x48/fff/a78bfa?text=Partner+03" alt="パートナー03"></li>
+                            <li><img decoding="async" src="https://via.placeholder.com/120x48/fff/c4b5fd?text=Partner+04" alt="パートナー04"></li>
+                            <li><img decoding="async" src="https://via.placeholder.com/120x48/fff/6834d4?text=Partner+05" alt="パートナー05"></li>
+                            <li><img decoding="async" src="https://via.placeholder.com/120x48/fff/8b5cf6?text=Partner+06" alt="パートナー06"></li>
+                            <li><img decoding="async" src="https://via.placeholder.com/120x48/fff/6834d4?text=Partner+01" alt="パートナー01"></li>
+                            <li><img decoding="async" src="https://via.placeholder.com/120x48/fff/8b5cf6?text=Partner+02" alt="パートナー02"></li>
+                            <li><img decoding="async" src="https://via.placeholder.com/120x48/fff/a78bfa?text=Partner+03" alt="パートナー03"></li>
+                            <li><img decoding="async" src="https://via.placeholder.com/120x48/fff/c4b5fd?text=Partner+04" alt="パートナー04"></li>
+                            <li><img decoding="async" src="https://via.placeholder.com/120x48/fff/6834d4?text=Partner+05" alt="パートナー05"></li>
+                            <li><img decoding="async" src="https://via.placeholder.com/120x48/fff/8b5cf6?text=Partner+06" alt="パートナー06"></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="business-card">
-                    <h3>地域特性に最適化</h3>
-                    <p>
-                        特に少子高齢化が進む日本のような地域において、<br>
-                        人的リソースの不足と高齢化という構造的課題を、技術とモデルの両面から解決します。
-                    </p>
+                <div class="btnArrow jsScrollView isAnimated" data-scroll-view="fadeInUpward">
+                    <a href="#contact">選ばれる理由を見る
+                        <span class="btnArrow__circle">
+                            <svg><use href="#arrow"></use></svg>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>

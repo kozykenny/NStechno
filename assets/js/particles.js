@@ -33,11 +33,11 @@ class ParticleBackground {
             this.particles.push({
                 x: Math.random() * this.canvas.width,
                 y: Math.random() * this.canvas.height,
-                vx: (Math.random() - 0.5) * 0.5,
-                vy: (Math.random() - 0.5) * 0.5,
-                radius: Math.random() * 2.5 + 1.5,
+                vx: (Math.random() - 0.5) * 0.4,
+                vy: (Math.random() - 0.5) * 0.4,
+                radius: Math.random() * 1.5 + 0.8,
                 color: this.getRandomColor(),
-                opacity: Math.random() * 0.45 + 0.5,
+                opacity: Math.random() * 0.12 + 0.08,
                 pulse: Math.random() * Math.PI * 2
             });
         }
@@ -50,13 +50,13 @@ class ParticleBackground {
             this.shapes.push({
                 x: Math.random() * this.canvas.width,
                 y: Math.random() * this.canvas.height,
-                vx: (Math.random() - 0.5) * 0.3,
-                vy: (Math.random() - 0.5) * 0.3,
+                vx: (Math.random() - 0.5) * 0.25,
+                vy: (Math.random() - 0.5) * 0.25,
                 size: size,
                 rotation: Math.random() * Math.PI * 2,
-                rotationSpeed: (Math.random() - 0.5) * 0.01,
+                rotationSpeed: (Math.random() - 0.5) * 0.008,
                 color: this.getRandomColor(),
-                opacity: Math.random() * 0.12 + 0.1,
+                opacity: Math.random() * 0.04 + 0.03,
                 type: Math.random() > 0.5 ? 'circle' : 'polygon',
                 sides: Math.floor(Math.random() * 4) + 3
             });
@@ -65,11 +65,9 @@ class ParticleBackground {
     
     getRandomColor() {
         const colors = [
-            { r: 249, g: 115, b: 22 },   // Orange
-            { r: 236, g: 72, b: 153 },  // Pink
-            { r: 79, g: 70, b: 229 },   // Purple
-            { r: 168, g: 85, b: 247 },  // Purple-500
-            { r: 139, g: 92, b: 246 }   // Purple-400
+            { r: 104, g: 52, b: 212 },   // Purple Heart
+            { r: 53, g: 22, b: 110 },   // Scarlet Gum
+            { r: 175, g: 147, b: 215 }  // Cold Purple
         ];
         return colors[Math.floor(Math.random() * colors.length)];
     }
@@ -90,13 +88,13 @@ class ParticleBackground {
                 particle.y = Math.max(0, Math.min(this.canvas.height, particle.y));
             }
             
-            // Add slight random drift
-            particle.vx += (Math.random() - 0.5) * 0.02;
-            particle.vy += (Math.random() - 0.5) * 0.02;
+            // Slight random drift
+            particle.vx += (Math.random() - 0.5) * 0.015;
+            particle.vy += (Math.random() - 0.5) * 0.015;
             
-            // Limit velocity
-            particle.vx = Math.max(-1, Math.min(1, particle.vx));
-            particle.vy = Math.max(-1, Math.min(1, particle.vy));
+            // Limit velocity (faster)
+            particle.vx = Math.max(-0.6, Math.min(0.6, particle.vx));
+            particle.vy = Math.max(-0.6, Math.min(0.6, particle.vy));
             
             // Pulse effect
             particle.pulse += 0.02;
@@ -115,10 +113,10 @@ class ParticleBackground {
             if (shape.y > this.canvas.height + shape.size) shape.y = -shape.size;
             
             // Slight drift
-            shape.vx += (Math.random() - 0.5) * 0.01;
-            shape.vy += (Math.random() - 0.5) * 0.01;
-            shape.vx = Math.max(-0.5, Math.min(0.5, shape.vx));
-            shape.vy = Math.max(-0.5, Math.min(0.5, shape.vy));
+            shape.vx += (Math.random() - 0.5) * 0.008;
+            shape.vy += (Math.random() - 0.5) * 0.008;
+            shape.vx = Math.max(-0.4, Math.min(0.4, shape.vx));
+            shape.vy = Math.max(-0.4, Math.min(0.4, shape.vy));
         }
     }
     
@@ -130,9 +128,9 @@ class ParticleBackground {
                 const distance = Math.sqrt(dx * dx + dy * dy);
                 
                 if (distance < this.connectionDistance) {
-                    const opacity = (1 - distance / this.connectionDistance) * 0.4;
+                    const opacity = (1 - distance / this.connectionDistance) * 0.1;
                     this.ctx.strokeStyle = `rgba(148, 163, 184, ${opacity})`;
-                    this.ctx.lineWidth = 1;
+                    this.ctx.lineWidth = 0.5;
                     this.ctx.beginPath();
                     this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
                     this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
@@ -190,7 +188,7 @@ class ParticleBackground {
                 particle.x, particle.y, radius * 3
             );
             gradient.addColorStop(0, `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${particle.opacity})`);
-            gradient.addColorStop(0.5, `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${particle.opacity * 0.5})`);
+            gradient.addColorStop(0.5, `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${particle.opacity * 0.4})`);
             gradient.addColorStop(1, `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, 0)`);
             
             this.ctx.fillStyle = gradient;
@@ -198,8 +196,8 @@ class ParticleBackground {
             this.ctx.arc(particle.x, particle.y, radius * 3, 0, Math.PI * 2);
             this.ctx.fill();
             
-            // Core dot
-            this.ctx.fillStyle = `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${particle.opacity * 1.5})`;
+            // Core dot (subtle)
+            this.ctx.fillStyle = `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${particle.opacity * 0.8})`;
             this.ctx.beginPath();
             this.ctx.arc(particle.x, particle.y, radius, 0, Math.PI * 2);
             this.ctx.fill();

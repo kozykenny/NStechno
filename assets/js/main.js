@@ -188,4 +188,19 @@ document.addEventListener('DOMContentLoaded', function() {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+
+    // Scroll-view animations for Reason section (jsScrollView)
+    const scrollViewOptions = { threshold: 0.15, rootMargin: '0px 0px -40px 0px' };
+    const scrollViewObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            }
+        });
+    }, scrollViewOptions);
+
+    document.querySelectorAll('.jsScrollView').forEach(el => {
+        el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+        scrollViewObserver.observe(el);
+    });
 });
